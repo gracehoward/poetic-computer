@@ -1,0 +1,78 @@
+@font-face {
+font-family: "Ogg";
+src: url("/assets/fonts/Ogg-Italic.otf");
+}
+
+@font-face {
+  font-family: "Galderglynn";
+  src: url("/assets/fonts/Galderglynn.otf");
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0 2vw;
+  color: green;
+  background-color: #f2f2de;
+}
+
+canvas {
+  padding-top: 1vh;
+  display: block;
+}
+
+h1 {
+  font-family: "Galderglynn";
+  transform: scaleX(1.2);
+  font-size: 35px;
+  display: inline-block;
+}
+
+h2 {
+  font-family: "Ogg";
+  font-size: 35px;
+  font-style: italic;
+  display: inline-block;
+  padding: 0 40px 0 15px;
+}
+
+p {
+  font-family: "Ogg";
+  font-weight: 300;
+  font-size: 25px;
+  float: right;
+  padding-top: 15vh;
+  padding-right: 20vw;
+  justify-content: right;
+  animation: test 2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ellipse1, .ellipse2, .ellipse3 {
+  font-size: 25px;
+  padding-right: 1.7vw;
+}
+
+.ellipse1 {
+  animation: fade 2s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+}
+
+.ellipse2 {
+  animation: fade 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s infinite;
+}
+
+.ellipse3 {
+  animation: fade 1s cubic-bezier(0.645, 0.045, 0.355, 1) 1s infinite;
+}
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 100;
+  }
+  100% {
+    opacity: 0;
+  }
+}
