@@ -63,8 +63,6 @@ function detect() {
   yolo.detect(function(err, results){
     objects = results;
     detect();
-
-
   });
 }
 
