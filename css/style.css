@@ -1,11 +1,11 @@
 @font-face {
-font-family: "Ogg";
-src: url("/assets/fonts/Ogg.otf");
+  font-family: "Glossy Display";
+  src: url("../assets/fonts/GlossyDisplayLight.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Galderglynn";
-  src: url("/assets/fonts/Galderglynn.otf");
+  font-family: "Glossy Display Italic";
+  src: url("../assets/fonts/GlossyDisplay-Regular-Italic.otf");
 }
 
 
@@ -22,14 +22,13 @@ canvas {
 }
 
 h1 {
-  font-family: "Galderglynn";
-  transform: scaleX(1.2);
-  font-size: 35px;
+  font-family: "Glossy Display";
+  font-size: 45px;
   display: inline-block;
 }
 
 h2 {
-  font-family: "Ogg";
+  font-family: "Glossy Display Italic";
   font-size: 35px;
   font-style: italic;
   display: inline-block;
@@ -37,12 +36,13 @@ h2 {
 }
 
 p {
-  font-family: "Ogg";
+  font-family: "Glossy Display";
+  font-style: none;
   font-weight: 300;
   font-size: 25px;
   float: right;
   padding-top: 15vh;
-  padding-right: 20vw;
+  padding-right: 22vw;
   justify-content: right;
   animation: test 2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
