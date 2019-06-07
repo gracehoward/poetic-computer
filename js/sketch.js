@@ -50,12 +50,12 @@ function draw() {
     ellipse(positions[i][0], positions[i][1], 4, 4);
   }
 
-  for (let i = 0; i < objects.length; i++) {
-    noFill();
-    strokeWeight(3);
-    stroke(0, 255, 0);
-    rect(objects[i].x* 3/4 * w, objects[i].y* 3/4* h, objects[i].w*width, objects[i].h*height);
-  }
+  // for (let i = 0; i < objects.length; i++) {
+  //   noFill();
+  //   strokeWeight(3);
+  //   stroke(0, 255, 0);
+  //   rect(objects[i].x* 3/4 * w, objects[i].y* 3/4* h, objects[i].w*width, objects[i].h*height);
+  // }
 
 }
 
