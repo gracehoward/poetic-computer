@@ -22,7 +22,6 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(w, h);
   capture = createCapture({
       audio: false,
       video: {
@@ -33,6 +32,7 @@ function setup() {
   capture.elt.setAttribute('playsinline', '');
   capture.hide();
   capture.size(w, h);
+  canvas = createCanvas(w, h);
   
   frameRate(fr);
     
@@ -50,7 +50,7 @@ function setup() {
 function draw() {
   blendMode(DIFFERENCE);
   tint(255, 150);
-  image(capture, 0, 0, w, h);
+  image(capture, 0, 0);
   filter(GRAY);  
   fill(0, 255, 0, 50);
   rect(0, 0, w, h);
@@ -76,8 +76,8 @@ function gotResult(err, results) {
   select('#result').html(results[0].className);
   select('#result2').html(results[1].className);
   select('#probability').html(nf(results[0].probability * random(10, 100), 0, 2));
-  document.getElementById("hidden").style.display = "inline";
-  document.getElementById("intro").style.display = "none";
+  document.getElementById('hidden').style.display = 'inline';
+  document.getElementById('intro').style.display = 'none';
 }
 
 
