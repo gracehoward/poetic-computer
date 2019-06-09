@@ -77,4 +77,7 @@ function gotResult(err, results) {
   select('#result2').html(results[1].className);
   select('#probability').html(nf(results[0].probability * random(10, 100), 0, 2));
   document.getElementById("hidden").style.display = "inline";
+  document.getElementById("intro").style.display = "none";
 }
+
+

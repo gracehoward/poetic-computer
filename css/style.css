@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Glossy Display";
-  src: url("../assets/fonts/GlossyDisplay-Light.ttf") format("truetype");
+  src: url("../assets/fonts/GlossyDisplayLight.ttf") format("truetype");
 }
 
 @font-face {
@@ -21,34 +21,44 @@ canvas {
   display: block;
 }
 
+
 h1 {
   font-family: "Glossy Display";
   font-size: 45px;
-  font-weight: 200;
   display: inline-block;
+  font-weight: 200;
+}
+
+h1 a:hover {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: green;
 }
 
 h2 {
-  padding: 0 40px 0 15px;
-  display: inline-block;
   font-family: "Glossy Display Italic";
   font-size: 35px;
   font-style: italic;
+  display: inline-block;
+  padding: 0 40px 0 15px;
 }
 
 button {
-  border: 1.5px solid green;
-  border-radius: 50%;
-  padding: 12px 22px;
-  margin-right: 20px;
   font-family: "Glossy Display";
-  font-size: 17px;
-  font-style: italic;
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  color: green;
   background-color: #f2f2ee;
+  border: 1.5px solid green;
+  color: green;
+  padding: 12px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  border-radius: 50%;
+  font-style: italic;
+  margin-right: 35px;
 }
 
 button:hover {
@@ -64,27 +74,38 @@ button:active {
   border: 0.5px solid green;
 }
 
+
 .buttons {
+  position: absolute;
   margin-top:36%;
   left:14%;
-  position: absolute;
 }
 
+
 p {
-  padding-top: 15vh;
-  width: 42%;
-  padding-right: 5vh;
-  justify-content: flex-start;
-  float: right;
   font-family: "Glossy Display";
   font-style: none;
   font-weight: 300;
   font-size: 25px;
+  float: right;
+  padding-top: 15vh;
+  justify-content: flex-start;
+  width: 42%;
+  padding-right: 5vh;
+}
+
+#intro {
+  display: inline;
 }
 
 #hidden {
   display: none;
 }
+
+.emphasis {
+  font-style: italic;
+}
+
 
 @keyframes fade {
   0% {
