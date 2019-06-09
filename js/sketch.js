@@ -1,17 +1,25 @@
 p5.disableFriendlyErrors = true;
 
-let text;
-
+// Webcam feed
 let capture;
-let keywords = "";
 
+// Face tracking
 let tracker;
+let results;
 
-let yolo;
-let objects = [];
+// Object classification
+let classifier;
 
+// Width and height
 let w = 750;
 let h = 550;
+
+// Framerate
+let fr = 10;
+
+function preload() {
+  const classifier = ml5.imageClassifier('MobileNet', capture);
+}
 
 function setup() {
   createCanvas(w, h);
@@ -25,17 +33,22 @@ function setup() {
   capture.elt.setAttribute('playsinline', '');
   capture.hide();
   capture.size(w, h);
+  
+  frameRate(fr);
     
+  
+  // Initialize the face tracking model
   tracker = new clm.tracker();
   tracker.init();
   tracker.start(capture.elt);
   
-  yolo = ml5.YOLO(capture, detect);
+   // Initialize the image classification model
+  classifier = ml5.imageClassifier('MobileNet', capture, modelReady);
+
 }
 
 function draw() {
   blendMode(DIFFERENCE);
-  // background(0, 0, 255);
   tint(255, 150);
   image(capture, 0, 0, w, h);
   filter(GRAY);  
@@ -49,22 +62,19 @@ function draw() {
     fill(0, 255, 0);
     ellipse(positions[i][0], positions[i][1], 4, 4);
   }
-
-  // for (let i = 0; i < objects.length; i++) {
-  //   noFill();
-  //   strokeWeight(3);
-  //   stroke(0, 255, 0);
-  //   rect(objects[i].x* 3/4 * w, objects[i].y* 3/4* h, objects[i].w*width, objects[i].h*height);
-  // }
-
 }
 
-function detect() {
-  yolo.detect(function(err, results){
-    objects = results;
-    detect();
-  });
+function modelReady() {
+  console.log('Model Ready');
 }
 
+function classifyVideo() {
+  classifier.predict(gotResult);
+}
 
-
+function gotResult(err, results) {
+  select('#result').html(results[0].className);
+  select('#result2').html(results[1].className);
+  select('#probability').html(nf(results[0].probability * random(10, 100), 0, 2));
+  document.getElementById("hidden").style.display = "inline";
+}
