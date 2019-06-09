@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Glossy Display";
-  src: url("../assets/fonts/GlossyDisplayLight.ttf") format("truetype");
+  src: url("../assets/fonts/GlossyDisplay-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -17,8 +17,6 @@ html, body {
 }
 
 canvas {
-  padding-top: 1vh;
-  display: block;
 }
 
 

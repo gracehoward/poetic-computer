@@ -80,4 +80,6 @@ function gotResult(err, results) {
   document.getElementById('intro').style.display = 'none';
 }
 
-
+function saveFrame() {
+  console.log('This does not work yet.');
+}
