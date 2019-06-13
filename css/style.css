@@ -13,10 +13,22 @@ html, body {
   margin: 0;
   padding: 0 2vw;
   color: green;
-  background-color: #f2f2ee;
+/*  background-color: #f2f2ee;  */
+  background-color: #ededed;
 }
 
 canvas {
+  padding-top: 1vh;
+  display: block;
+}
+
+#sketch {
+  width: 100%;
+}
+
+#sketch canvas {
+  width: 50% !important;
+  height: auto !important;
 }
 
 
@@ -72,10 +84,9 @@ button:active {
   border: 0.5px solid green;
 }
 
-
 .buttons {
   position: absolute;
-  margin-top:36%;
+  margin-top: 2%;
   left:14%;
 }
 
@@ -86,10 +97,19 @@ p {
   font-weight: 300;
   font-size: 25px;
   float: right;
-  padding-top: 15vh;
+  padding-top: 14vh;
   justify-content: flex-start;
-  width: 42%;
-  padding-right: 5vh;
+  width: 38%;
+  padding-right: 5vw;
+}
+
+br {
+  line-height: 4.5vh;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid green;
 }
 
 #intro {
@@ -103,7 +123,6 @@ p {
 .emphasis {
   font-style: italic;
 }
-
 
 @keyframes fade {
   0% {

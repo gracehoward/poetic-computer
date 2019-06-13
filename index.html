@@ -2,39 +2,47 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="poetic.computer generates poetry based off what it sees (you)">
+    <meta name="description" content="poetic.computer renders the user into poetry">
     <meta name="keywords" content="Computer Vision, Poetry">
     <meta name="author" content="Grace Kim Howard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="js/p5.js"></script>
+    <script src="js/p5.dom.min.js"></script>
     <script src="js/ml5.min.js"></script>
     <script src="js/clmtrackr.min.js"></script>
+    <script src="js/rita-full.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>poetic.computer</title>
   </head>
   <body>
     <h1><a href="https://poetic.computer">The Poetics of Computer Vision</a></h1>
+
     <div id="intro">
       <p>
-        Click "Generate Poem" and <span class="emphasis">poetic.computer</span><br />
-        will write you a poem. 
-      </p>
-    </div>
-    <div id="hidden">
-      <p>
-        Poem <span id="probability">...</span><br/>
-        You are the <span id="result">...</span><br/>
-        to my <span id="result2">...</span>
+        Click "Generate Poem" for <span class="emphasis">poetic.computer</span><br />to write you a poem. 
       </p>
     </div>
 
-    <script src="js/sketch.js"></script>
+    <div id="hidden">
+      <p>
+        <u>Poem <span id="probability"></u></span><br /><br />
+        <span id="stanza1"></span><br /><br />
+        <span id="stanza2"></span><br /><br />
+        <span id="stanza3"></span><br /><br />
+        <span id="stanza4"></span><br />
+      </p>
+    </div>
+
+    <div id="sketchWrapper">
+      <div id="sketch"></div>
+    </div>
 
     <div class="buttons">
       <button onclick="classifyVideo()">Generate Poem</button>
       <button onclick="saveFrame()">Save Poem</button>
     </div>
 
-</body>
+    <script src="js/sketch.js"></script>
+    
+  </body>
 </html>
