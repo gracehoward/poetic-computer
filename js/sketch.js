@@ -30,7 +30,8 @@ function setup() {
     audio: false,
     video: {
       width: w,
-      height: h
+      height: h,
+      muted: "muted"
     }
   });
   capture.elt.setAttribute('playsinline', '');
