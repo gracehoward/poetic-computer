@@ -22,20 +22,22 @@ let fr = 10;
 
 function preload() {
   GlossyDisplay = loadFont("../assets/fonts/GlossyDisplay-Regular-Italic.otf");
-  const classifier = ml5.imageClassifier('MobileNet', capture);
+  const classifier = ml5.imageClassifier('MobileNet', capture, modelReady);
 }
 
 function setup() {
-  capture = createCapture({
-    audio: false,
-    video: {
-      width: w,
-      height: h
-    }
-  });
+  // capture = createCapture({
+  //   audio: false,
+  //   video: {
+  //     width: w,
+  //     height: h
+  //   }
+  // });
+  capture = createCapture(VIDEO);
   capture.elt.setAttribute('playsinline', '');
   capture.hide();
   capture.size(w, h);
+
   let canvas = createCanvas(w, h);
   canvas.parent('sketch');
 
