@@ -63,35 +63,39 @@ h2 {
 button {
   font-family: "Glossy Display";
   background-color: #FFF;
-  border: 1.5px solid green;
+  border: 0.5px solid green;
   color: green;
   padding: 12px 22px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
-  border-radius: 2%;
+  border-radius: 50%;
   font-style: italic;
   margin-right: 35px;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: green;
-  border-color: green;
-  color: #f2f2ee;
-  text-shadow: 1px 1px 10px #FFF;
-  box-shadow: 2px 2px 8px green;
+/*  background-color: green;
+*/  border-color: green;
+/*  color: #f2f2ee;
+*/  text-shadow: 1px 1px 10px #FFF;
+  box-shadow: 2px 2px 5px green;
+  transform: rotate(15deg);
 }
 
 button:active {
-  border: 0.5px solid green;
+  border: 1px solid green;
 }
 
 .buttons {
   position: absolute;
   margin-top: 2%;
   left:14%;
+}
+
+#button1 {
 }
 
 
@@ -103,8 +107,8 @@ p {
   float: right;
   justify-content: flex-start;
   width: 38%;
-  padding-top: 1vh;
-  padding-right: 5vw;
+  padding-top: 2vh;
+  margin-right: 5vw;
 }
 
 br {
