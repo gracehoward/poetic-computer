@@ -15,7 +15,7 @@ let grammar;
 
 // Width and height
 let w = 750;
-let h = 550;
+let h = 562.50;
 
 // Framerate
 let fr = 10;

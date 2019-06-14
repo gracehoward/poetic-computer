@@ -8,6 +8,10 @@
   src: url("../assets/fonts/GlossyDisplay-Regular-Italic.otf");
 }
 
+@font-face {
+  font-family: "SF Mono";
+  src: url("../assets/fonts/SFMono-Light.otf");
+}
 
 html, body {
   margin: 0;
@@ -34,7 +38,6 @@ canvas {
 
 h1 {
   font-family: "Glossy Display";
-  font-style: italic;
   font-size: 60px;
   display: inline-block;
   font-weight: 200;
@@ -95,7 +98,7 @@ button:active {
 p {
   font-family: "SF Mono";
   font-style: none;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 20px;
   float: right;
   justify-content: flex-start;
