@@ -14,11 +14,10 @@ html, body {
   padding: 0 2vw;
   color: green;
 /*  background-color: #f2f2ee;  */
-  background-color: #ededed;
+  background-color: #FFF;
 }
 
 canvas {
-  padding-top: 1vh;
   display: block;
 }
 
@@ -29,12 +28,14 @@ canvas {
 #sketch canvas {
   width: 50% !important;
   height: auto !important;
+  box-shadow: 0px 0px 5px green;
 }
 
 
 h1 {
   font-family: "Glossy Display";
-  font-size: 45px;
+  font-style: italic;
+  font-size: 60px;
   display: inline-block;
   font-weight: 200;
 }
@@ -58,7 +59,7 @@ h2 {
 
 button {
   font-family: "Glossy Display";
-  background-color: #f2f2ee;
+  background-color: #FFF;
   border: 1.5px solid green;
   color: green;
   padding: 12px 22px;
@@ -66,7 +67,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 17px;
-  border-radius: 50%;
+  border-radius: 2%;
   font-style: italic;
   margin-right: 35px;
 }
@@ -92,24 +93,24 @@ button:active {
 
 
 p {
-  font-family: "Glossy Display";
+  font-family: "SF Mono";
   font-style: none;
   font-weight: 300;
-  font-size: 25px;
+  font-size: 20px;
   float: right;
-  padding-top: 14vh;
   justify-content: flex-start;
   width: 38%;
+  padding-top: 1vh;
   padding-right: 5vw;
 }
 
 br {
-  line-height: 4.5vh;
+  line-height: 4vh;
 }
 
 u {
   text-decoration: none;
-  border-bottom: 1px solid green;
+  border-bottom: 1.2px solid green;
 }
 
 #intro {
