@@ -1,8 +1,8 @@
-@font-face {
+/*@font-face {
   font-family: "Glossy Display";
   src: url("../assets/fonts/GlossyDisplay-Light.ttf") format("truetype");
 }
-
+*/
 @font-face {
   font-family: "Glossy Display Italic";
   src: url("../assets/fonts/GlossyDisplay-Regular-Italic.otf");
@@ -37,19 +37,27 @@ canvas {
 
 
 h1 {
-  font-family: "Glossy Display";
-  font-size: 60px;
+  font-family: "Glossy Display Italic";
+  font-size: 55px;
   display: inline-block;
   font-weight: 200;
 }
 
 h1 a:hover {
+  display: inline-block;
+  color: #bcff14;
   font-style: italic;
 }
 
 a {
   text-decoration: none;
   color: green;
+}
+
+#about-link {
+  font-family: "SF Mono";
+  font-size: 30px;
+  float: right;
 }
 
 h2 {
@@ -107,7 +115,7 @@ p {
   float: right;
   justify-content: flex-start;
   width: 38%;
-  padding-top: 2vh;
+  padding-top: 5vh;
   margin-right: 5vw;
 }
 
